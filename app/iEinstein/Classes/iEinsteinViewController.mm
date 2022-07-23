@@ -326,16 +326,17 @@ iEinsteinViewController ()
 
 	mSoundManager = new TCoreAudioSoundManager(mLog);
 
-	// iPad is 1024x768. This size, and some appropriate scaling factors, should be selectable from
-	// the 'Settings' panel.
-
-	static int widthLUT[] = { 320, 640, 384, 786, 640, 320, 750, 375, 1080, 540 };
-	static int heightLUT[] = { 480, 960, 512, 1024, 1136, 568, 1134, 567, 1920, 960 };
-
+	// Use MP 2x00 size as default, or prefs value as CGSize if set
 	NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
-	int index = [(NSNumber*) [prefs objectForKey:@"screen_resolution"] intValue];
-	int newtonScreenWidth = widthLUT[index];
-	int newtonScreenHeight = heightLUT[index];
+	CGSize newtonScreenSize = CGSizeFromString([prefs stringForKey:@"screen_resolution"]);
+	int newtonScreenWidth = 320;
+	int newtonScreenHeight = 480;
+	if (!CGSizeEqualToSize(newtonScreenSize, CGSizeZero))
+	{
+		// CGSize from prefs is valid
+		newtonScreenWidth = (int) newtonScreenSize.width;
+		newtonScreenHeight = (int) newtonScreenSize.height;
+	}
 
 #ifdef USE_STORYBOARDS
 	// When using storyboards as configured, the einsteinView is a subview of self.view
@@ -390,9 +391,9 @@ iEinsteinViewController ()
 
 	NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
 	[prefs synchronize];
-	int currentScreenResolution = [(NSNumber*) [prefs objectForKey:@"screen_resolution"] intValue];
+	NSString* currentScreenResolution = [prefs stringForKey:@"screen_resolution"];
 
-	if (currentScreenResolution != lastKnownScreenResolution)
+	if (![currentScreenResolution isEqualToString:lastKnownScreenResolution])
 	{
 		// Reboot emulator
 

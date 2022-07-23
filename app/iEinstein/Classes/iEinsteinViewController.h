@@ -46,7 +46,7 @@ class TLog;
 	TEmulator* mEmulator;
 	TPlatformManager* mPlatformManager;
 	TLog* mLog;
-	int lastKnownScreenResolution;
+	NSString* lastKnownScreenResolution;
 }
 
 @property (retain, nonatomic) IBOutlet iEinsteinView* einsteinView;

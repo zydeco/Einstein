@@ -25,29 +25,37 @@
 			<string>0</string>
 			<key>Titles</key>
 			<array>
-				<string>MP 2x00 (320x480)</string>
-				<string>iPhone 4 (640x960)</string>
-				<string>Quarter iPad (384x512)</string>
-				<string>iPad (768x1024)</string>
-				<string>iPhone 5/5s (640x1136)</string>
-				<string>Quarter iPhone 5/5s (320x568)</string>
-				<string>iPhone 6 (750x1134)</string>
-				<string>Quarter iPhone 6 (375x567)</string>
-				<string>iPhone 6+ (1080x1920)</string>
-				<string>Quarter iPhone 6+ (540x960)</string>
+				<string>MP 2x00 (320×480)</string>
+				<string>iPhone 4 (640×960)</string>
+				<string>¼ iPad (384×512)</string>
+				<string>iPad (768×1024)</string>
+				<string>iPhone 5/5s/5c (640×1136)</string>
+				<string>¼ iPhone 5/5s/5c (320×568)</string>
+				<string>iPhone 6 (750×1134)</string>
+				<string>¼ iPhone 6 (375×567)</string>
+				<string>iPhone 6+ (1080×1920)</string>
+				<string>¼ iPhone 6+ (540×960)</string>
+				<string>¼ iPhone 11/XR/XS Max (414×814)</string>
+				<string>¼ iPhone X/XS/11 Pro/12 &amp; 13 mini (375×728)</string>
+				<string>¼ iPhone 12/13/12 Pro/13 Pro (390×763)</string>
+				<string>¼ iPhone 12 &amp; 13 Pro Max (428×845)</string>
 			</array>
 			<key>Values</key>
 			<array>
-				<string>0</string>
-				<string>1</string>
-				<string>2</string>
-				<string>3</string>
-				<string>4</string>
-				<string>5</string>
-				<string>6</string>
-				<string>7</string>
-				<string>8</string>
-				<string>9</string>
+				<string>{320,480}</string>
+				<string>{640,960}</string>
+				<string>{384,512}</string>
+				<string>{768,1024}</string>
+				<string>{640,1136}</string>
+				<string>{320,568}</string>
+				<string>{750,1134}</string>
+				<string>{375,567}</string>
+				<string>{1080,1920}</string>
+				<string>{540,960}</string>
+				<string>{414,814}</string>
+				<string>{375,728}</string>
+				<string>{390,763}</string>
+				<string>{428,845}</string>
 			</array>
 		</dict>
 		<dict>

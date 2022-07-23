@@ -37,7 +37,7 @@
 + (void)initialize
 {
 	NSDictionary* defaults = [NSDictionary dictionaryWithObjectsAndKeys:
-											   [NSNumber numberWithInt:0], @"screen_resolution",
+											   @"{320,480}", @"screen_resolution",
 										   [NSNumber numberWithBool:NO], @"clear_flash_ram",
 										   @"{8,9.88897}", @"printable_size",
 										   nil];
