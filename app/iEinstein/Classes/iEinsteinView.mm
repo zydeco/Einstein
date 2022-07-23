@@ -212,15 +212,15 @@
 	CGRect inRect = [v CGRectValue];
 	CGRect r = screenImageRect;
 
-	float wratio = r.size.width / newtonScreenWidth;
-	float hratio = r.size.height / newtonScreenHeight;
+	CGFloat wratio = r.size.width / newtonScreenWidth;
+	CGFloat hratio = r.size.height / newtonScreenHeight;
 
-	int left = (inRect.origin.x * wratio) + r.origin.x;
-	int top = (inRect.origin.y * hratio) + r.origin.y;
-	int right = left + (inRect.size.width * wratio);
-	int bottom = top + (inRect.size.height * hratio);
+	CGFloat left = (inRect.origin.x * wratio) + r.origin.x;
+	CGFloat top = (inRect.origin.y * hratio) + r.origin.y;
+	CGFloat right = left + (inRect.size.width * wratio);
+	CGFloat bottom = top + (inRect.size.height * hratio);
 
-	CGRect outRect = CGRectMake(left, top, right - left + 1, bottom - top + 1);
+	CGRect outRect = CGRectMake(left, top, right - left, bottom - top);
 	[self setNeedsDisplayInRect:outRect];
 }
 
