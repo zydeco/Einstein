@@ -121,7 +121,7 @@
 	{
 		// Just fill black
 		CGFloat black[] = { 0.0, 0.0, 0.0, 1.0 };
-		CGRect frame = [self frame];
+		CGRect frame = [self bounds];
 		CGContextSetFillColor(theContext, black);
 		CGContextFillRect(theContext, frame);
 	} else
@@ -146,7 +146,7 @@
 
 			// CGRect screenBounds = [[UIScreen mainScreen] bounds]; //OLD
 			CGRect screenBounds = [self bounds];
-			CGRect r = [self frame];
+			CGRect r = [self bounds];
 
 			if (screenBounds.size.width > newtonScreenWidth && screenBounds.size.height > newtonScreenHeight)
 			{
